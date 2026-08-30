@@ -1,0 +1,134 @@
+/* Root variables */
+:root {
+    --primary-color: #1abc9c;   /* Teal */
+    --secondary-color: #3498db; /* Blue */
+    --success-color: #2ecc71;   /* Green */
+    --fail-color: #e74c3c;      /* Red */
+    --background-color: rgba(0, 0, 0, 0.85);
+    --text-color: #ecf0f1;
+    --card-background: #2c3e50;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Body and container */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: url('../images/img.png') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 5px var(--shadow-color);
+}
+
+/* Result card */
+.result-card {
+    background-color: var(--card-background);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.result-card h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: var(--secondary-color);
+}
+
+.output {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.output .status {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--success-color); /* Green by default */
+    margin-bottom: 15px;
+}
+
+.output .salary {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #f1c40f; /* Yellow highlight */
+}
+
+/* Conditional styling for fail message */
+.output .status:contains("Sorry") {
+    color: var(--fail-color);
+}
+
+/* Button back */
+.btn-back {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .result-card {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .result-card h2 {
+        font-size: 1.7rem;
+    }
+
+    .output {
+        font-size: 1.1rem;
+    }
+
+    .output .status {
+        font-size: 1.3rem;
+    }
+
+    .output .salary {
+        font-size: 1.2rem;
+    }
+}

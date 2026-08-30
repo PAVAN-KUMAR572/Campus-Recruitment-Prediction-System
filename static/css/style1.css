@@ -1,0 +1,163 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Main Background */
+.main {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('../images/img.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: rgba(0,0,0,0.5);
+}
+
+.logo {
+    color: #ff9900;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 50px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ff9900;
+}
+
+/* Content Section */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 80px;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.content h1 span {
+    color: #ff9900;
+}
+
+.content .par {
+    font-size: 20px;
+    color: #f0f0f0;
+    max-width: 700px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Button */
+.cn {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff9900;
+    color: #000;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.cn:hover {
+    background: #fff;
+    color: #ff9900;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 40px;
+    }
+
+    .content {
+        padding-left: 40px;
+    }
+
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .content .par {
+        font-size: 18px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .menu ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding-left: 20px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content .par {
+        font-size: 16px;
+    }
+
+    .cn {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}
